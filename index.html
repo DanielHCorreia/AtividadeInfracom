@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="script.js"></script>
+
+    <title>Atividade de Infracom</title>
+
+    
+    <meta name="author" content="Daniel Henrique e Murilo Ventura">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-center">
+				Atividade de Infra-com
+			</h3>
+			<form role="form">
+				<div class="form-group">
+					 
+					<label for="users">
+						Números de usuários
+					</label>
+					<input type="number" class="form-control" id="users">
+				</div>
+				<div class="form-group">
+					<label for="probActiveUsers">
+					Probabilidade que um usuário fique ativo, digite em porcentagem (entre 0 e 100)
+					</label>
+					<input type="number" class="form-control" id="probActiveUsers">
+				</div>
+				<div class="form-group">
+					<label for="ActiveUsersConsume">
+						Demanda por usuário ativo (Mbps)
+					</label>
+					<input type="number" class="form-control" id="ActiveUsersConsume">
+				</div>
+
+				<div class="form-group">
+					 
+					<label for="linkCapacity">
+						Capacidade do Enlace (Mbps)
+					</label>
+					<input type="number" class="form-control" id="linkCapacity">
+				</div>
+				<div class="form-group">
+					 
+					
+				</div>
+				
+				<button class="btn btn-primary" type="button" onclick="calcular()">
+					Calcular
+				</button>
+				<button class="btn btn-primary" type="reset">
+					Limpar Valores
+				</button>
+			</form>
+			<div class="row">
+				<div class="col-md-1">
+					 <span class="badge badge-default">-- Considerando a comutação por circuitos --</span>
+					 <span class="badge badge-default"> O número máximo de usuários simultaneamente atendidos é: <input type="text" id="resultado" > </span>
+					 <span class="badge badge-default">-- Considerando a comutação por pacotes --</span>
+					 <span class="badge badge-default"> A probabilidade da demanda superar a capacidade do enlace é: <input type="text" id="resultado2"> </span>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
