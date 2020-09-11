@@ -1,18 +1,15 @@
 //versão 0.1
+// Alunos:
 // Daniel Henrique Amorim C. 
+// Murilo Ventura
 // 09/20
 
-// 1.Variáveis
-let users;
-let probActiveUsers;
-//let pUsuarioInativo;
-let maxUsersInCircuit = 0;
-let  UseOfLink= 0; // 0 a 1
-let ActiveUsersConsume;
-let linkCapacity;
+
 
 
 //Funções
+
+
 
 function fatorial (n){
   if (n==0 || n==1){
@@ -22,6 +19,16 @@ function fatorial (n){
 } 
 
 function calcular(){
+
+
+// 1.Variáveis
+let users=0;
+let probActiveUsers=0;
+//let pUsuarioInativo;
+let maxUsersInCircuit = 0;
+let UseOfLink= 0; // 0 a 1
+let ActiveUsersConsume=0;
+let linkCapacity=0;
 
     
   
@@ -62,7 +69,7 @@ if (+ActiveUsersConsume < +linkCapacity){
 
 //Letra B
 
-let k = 7; // usuarios ativos
+let k = maxUsersInCircuit; // usuarios ativos
 let n =users; //número total de usuários
 let p = probActiveUsers // probabilidade de estar transmitindo
 let somatorioProbabilidades = 0;
@@ -77,5 +84,5 @@ k++;
 
 //console.log("probabilidade: ",somatorioProbabilidades);
 document.getElementById('resultado2').value = somatorioProbabilidades;
-e.preventDefault();
+//e.preventDefault();
 }
